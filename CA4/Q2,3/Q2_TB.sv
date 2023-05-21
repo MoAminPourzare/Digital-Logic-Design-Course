@@ -1,0 +1,24 @@
+`timescale 1ns/1ns
+module Q2_TB();
+	logic serialIn=0,ccllkk=0;
+	logic [7:0] paralellOut;
+	wire serialOut;
+	Q2_shifterRegister C1(serialIn,ccllkk,serialOut,paralellOut);
+	initial begin
+		#200 ccllkk=0;
+		#60 ccllkk=1;
+		#70 serialIn=1;
+		#60 ccllkk=0;
+		#70 ccllkk=1;
+		#100 ccllkk=0;
+		#70 serialIn=0;
+		#30 ccllkk=0;
+		#70 serialIn=1;
+		#76 ccllkk=1;
+		#50 ccllkk=0;
+		#70 serialIn=0;
+		#60 ccllkk=1;
+		#60 ccllkk=0;
+		#70 $stop;
+	end
+endmodule

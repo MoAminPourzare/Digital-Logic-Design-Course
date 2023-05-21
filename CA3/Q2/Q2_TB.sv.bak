@@ -1,0 +1,24 @@
+`timescale 1ns/1ns
+module Q2_TB ();
+	logic [15:0] mm=3'd5,nn=3'd4;
+	logic [2:0] opc;
+	logic cc=1'b0;
+	wire zerr1,negg1,zerr2,negg2;
+	logic [15:0] outF1,outF2;
+	Q2 A1(mm, nn, cc, opc, outF1, zerr1, negg1);
+	Q2_yosys A2(mm, nn, cc, opc, outF2, zerr2, negg2);
+	initial begin
+		opc=3'd0;
+		repeat (20) begin 
+			#20 mm=$random; #20 nn=$random; #40 cc=$random;
+		end
+		repeat (10) begin 
+			#40 mm=$random; #40 nn=$random; cc=$random;
+		opc=3'd1;
+		#100 nn=$random;
+		#40 mm=$random;
+		#20 cc=$random;
+		end
+		#450 $stop;
+		end
+endmodule

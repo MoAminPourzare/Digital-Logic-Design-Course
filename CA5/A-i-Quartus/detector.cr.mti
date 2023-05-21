@@ -1,0 +1,15 @@
+C:/Users/Asus/Desktop/CA5/A-i-Quartus/detector_TB.v {1 {vlog -work work -stats=none {C:\Users\Asus\Desktop\CA5\A-i-Quartus\detector_TB.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module moore10110_TB
+
+Top level modules:
+	moore10110_TB
+
+} {} {}} C:/Users/Asus/Desktop/CA5/A-i-Quartus/detector_verilog.v {1 {vlog -work work -stats=none {C:\Users\Asus\Desktop\CA5\A-i-Quartus\detector_verilog.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module moore10110
+
+Top level modules:
+	moore10110
+
+} {} {}}

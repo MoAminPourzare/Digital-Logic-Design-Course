@@ -1,0 +1,9 @@
+
+State Machine - |detector_verilog|pstate
+Name pstate.F pstate.E pstate.D pstate.C pstate.B pstate.A 
+pstate.A 0 0 0 0 0 0 
+pstate.B 0 0 0 0 1 1 
+pstate.C 0 0 0 1 0 1 
+pstate.D 0 0 1 0 0 1 
+pstate.E 0 1 0 0 0 1 
+pstate.F 1 0 0 0 0 1 

@@ -1,0 +1,17 @@
+`timescale 1ns/1ns
+module Q5_Circuit (input a,b,c,d,output w);
+	supply0 Gnd;
+	supply1 Vdd;
+	wire w1,w2,w3,w4,w5;
+	pmos #(4,7,9) T1(w1,Vdd,a);
+	pmos #(4,7,9) T2(w1,Vdd,b);
+	pmos #(4,7,9) T3(w,w1,w5);
+	pmos #(4,7,9) T4(w2,Vdd,c);
+	pmos #(4,7,9) T5(w,w2,d);
+	nmos #(3,5,7) T6(w4,Gnd,d);
+	nmos #(3,5,7) T7(w4,Gnd,c);
+	nmos #(3,5,7) T8(w3,w4,b);
+	nmos #(3,5,7) T9(w,w3,a);
+	nmos #(3,5,7) T10(w,w4,w5);
+	not #(7,9) T11(w5,d);
+endmodule

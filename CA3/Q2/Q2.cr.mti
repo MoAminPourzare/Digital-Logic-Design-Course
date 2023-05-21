@@ -1,0 +1,40 @@
+C:/Users/Asus/Desktop/projects/Q2/Q2_verilog.sv {2 {vlog -work work -sv -stats=none C:/Users/Asus/Desktop/projects/Q2/Q2_verilog.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Shifter2bit1
+-- Compiling module Adder
+-- Compiling module And16bit
+-- Compiling module Mux4
+-- Compiling module Mux2
+-- Compiling module Or16bit
+-- Compiling module Orbits
+-- Compiling module Inventer
+-- Compiling module Q2
+** Warning: C:/Users/Asus/Desktop/projects/Q2/Q2_verilog.sv(64): (vlog-2275) Existing module 'Adder' will be overwritten.
+-- Compiling module Adder
+** Warning: C:/Users/Asus/Desktop/projects/Q2/Q2_verilog.sv(253): (vlog-2275) Existing module 'And16bit' will be overwritten.
+-- Compiling module And16bit
+** Warning: C:/Users/Asus/Desktop/projects/Q2/Q2_verilog.sv(275): (vlog-2275) Existing module 'Inventer' will be overwritten.
+-- Compiling module Inventer
+** Warning: C:/Users/Asus/Desktop/projects/Q2/Q2_verilog.sv(296): (vlog-2275) Existing module 'Mux4' will be overwritten.
+-- Compiling module Mux4
+** Warning: C:/Users/Asus/Desktop/projects/Q2/Q2_verilog.sv(391): (vlog-2275) Existing module 'Or16bit' will be overwritten.
+-- Compiling module Or16bit
+** Warning: C:/Users/Asus/Desktop/projects/Q2/Q2_verilog.sv(413): (vlog-2275) Existing module 'Orbits' will be overwritten.
+-- Compiling module Orbits
+-- Compiling module Q2_yosys
+** Warning: C:/Users/Asus/Desktop/projects/Q2/Q2_verilog.sv(526): (vlog-2275) Existing module 'Shifter2bit1' will be overwritten.
+-- Compiling module Shifter2bit1
+
+Top level modules:
+	Mux2
+	Q2
+	Q2_yosys
+
+} {} {}} C:/Users/Asus/Desktop/projects/Q2/Q2_TB.sv {1 {vlog -work work -sv -stats=none C:/Users/Asus/Desktop/projects/Q2/Q2_TB.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Q2_TB
+
+Top level modules:
+	Q2_TB
+
+} {} {}}

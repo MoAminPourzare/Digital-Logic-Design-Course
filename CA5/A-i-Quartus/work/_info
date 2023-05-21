@@ -1,0 +1,58 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Asus/Desktop/CA5/A-i-Quartus
+vmoore10110
+Z1 !s110 1640645699
+!i10b 1
+!s100 UXfD3U^N`gJGHiBdn6c8X0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IIOQ_WNNSfmdI]ilbL3XE13
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1640645698
+8C:\Users\Asus\Desktop\CA5\A-i-Quartus\detector_verilog.v
+FC:\Users\Asus\Desktop\CA5\A-i-Quartus\detector_verilog.v
+!i122 0
+L0 2 23
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1640645699.000000
+!s107 C:\Users\Asus\Desktop\CA5\A-i-Quartus\detector_verilog.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\Asus\Desktop\CA5\A-i-Quartus\detector_verilog.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vmoore10110_TB
+R1
+!i10b 1
+!s100 1WJOc62D]do5RU4Xm=41S1
+R2
+I:a1;Mc>gSN=X0l:EY:mi;1
+R3
+R0
+w1640645691
+8C:\Users\Asus\Desktop\CA5\A-i-Quartus\detector_TB.v
+FC:\Users\Asus\Desktop\CA5\A-i-Quartus\detector_TB.v
+!i122 1
+L0 2 24
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:\Users\Asus\Desktop\CA5\A-i-Quartus\detector_TB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\Asus\Desktop\CA5\A-i-Quartus\detector_TB.v|
+!i113 1
+R6
+R7
+nmoore10110_@t@b

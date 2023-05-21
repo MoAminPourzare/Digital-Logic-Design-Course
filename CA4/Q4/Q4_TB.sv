@@ -1,0 +1,42 @@
+`timescale 1ns/1ns
+module Q4_TB();
+	logic serialIn=0,ccllkk=0,reset=0;
+	wire [7:0] paralellOut,paralellOutAA;
+	wire serialOut,serialOutAA;
+	Q4_shifterRegister C2(serialIn,ccllkk,reset,serialOut,paralellOut);
+	Q4_always C1(serialIn,ccllkk,reset,serialOutAA,paralellOutAA);
+	initial begin
+		#200 ccllkk=0;
+		#60 ccllkk=1;
+		#70 serialIn=1;
+		#60 ccllkk=0;
+		#70 ccllkk=1;
+		#100 ccllkk=0;
+		#70 serialIn=0;
+		#30 ccllkk=0;
+		#70 serialIn=1;
+		#76 ccllkk=1;
+		#50 ccllkk=0;
+		#70 serialIn=0;
+		#60 ccllkk=1;
+		#60 ccllkk=0;
+		#60 ccllkk=1;
+		#40 serialIn=1;
+		#60 ccllkk=0;
+		#60 ccllkk=1;
+		#60 ccllkk=0;
+		#70 serialIn=0;
+		#60 ccllkk=1;
+		#70 serialIn=1;
+		#50 ccllkk=0;
+		#70 ccllkk=1;
+		#70 serialIn=0;
+		#45 ccllkk=0;
+		#45 ccllkk=1;
+		#60 ccllkk=0;
+		#50 reset=1;
+		#45 ccllkk=1;
+		#60 ccllkk=0;
+		#200 $stop;
+	end
+endmodule

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Dec 29 12:16:17 2021
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : Orthogonal
+Top-level Entity Name : Orthogonal
+Family : Cyclone IV E
+Device : EP4CE6E22A7
+Timing Models : Final
+Total logic elements : 21 / 6,272 ( < 1 % )
+    Total combinational functions : 21 / 6,272 ( < 1 % )
+    Dedicated logic registers : 13 / 6,272 ( < 1 % )
+Total registers : 13
+Total pins : 12 / 92 ( 13 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

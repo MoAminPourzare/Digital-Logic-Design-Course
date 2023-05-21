@@ -1,0 +1,251 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Asus/Desktop/verilog/P2/Q1
+vCA2_E3_2
+!s110 1636138151
+!i10b 1
+!s100 6f?3:aO:lj9Vn^X[M=YdX3
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IPRSIX_ZXhM4XmQlichI4n2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Asus/Desktop/verilog/P2/Q2
+w1636137472
+Z3 8C:\Users\Asus\Desktop\verilog\P2\Q2\Q3_verilog.v
+Z4 FC:\Users\Asus\Desktop\verilog\P2\Q2\Q3_verilog.v
+!i122 26
+Z5 L0 40 3
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1636138151.000000
+Z7 !s107 C:\Users\Asus\Desktop\verilog\P2\Q2\Q3_verilog.v|
+Z8 !s90 -reportprogress|300|-work|work|-stats=none|C:\Users\Asus\Desktop\verilog\P2\Q2\Q3_verilog.v|
+!i113 1
+Z9 o-work work
+Z10 tCvgOpt 0
+n@c@a2_@e3_2
+vNOT_gate
+Z11 !s110 1636138682
+!i10b 1
+!s100 R>;z]X4K^@gjmfeBOe4DB0
+R0
+I2m3e5nNAXRWJTb?zTSdU03
+R1
+R2
+Z12 w1636138637
+R3
+R4
+!i122 36
+L0 22 6
+R6
+r1
+!s85 0
+31
+Z13 !s108 1636138682.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@n@o@t_gate
+vNotif1
+R11
+!i10b 1
+!s100 ]n88KRHX9J1=^n2d4d;^>2
+R0
+IDaZLldZ;_fKCDIP3o1iLS0
+R1
+R2
+R12
+R3
+R4
+!i122 36
+L0 10 11
+R6
+r1
+!s85 0
+31
+R13
+R7
+R8
+!i113 1
+R9
+R10
+n@notif1
+vQ1_Circuit_3
+R11
+!i10b 1
+!s100 [EY;g<82aTL5zz1VPJ@_12
+R0
+IZPO17f;oHXChb=ehK:II:0
+R1
+R2
+R12
+R3
+R4
+!i122 36
+L0 2 7
+R6
+r1
+!s85 0
+31
+R13
+R7
+R8
+!i113 1
+R9
+R10
+n@q1_@circuit_3
+vQ1_Circuit_TB
+!s110 1636126806
+!i10b 1
+!s100 S7dgD?21@zV@]Gnka:@Jo3
+R0
+IJ64f1DM`[5SYPk2johii70
+R1
+R2
+w1636126800
+Z14 8C:\Users\Asus\Desktop\verilog\P2\Q2\Q2_TB.v
+Z15 FC:\Users\Asus\Desktop\verilog\P2\Q2\Q2_TB.v
+!i122 1
+Z16 L0 2 10
+R6
+r1
+!s85 0
+31
+!s108 1636126805.000000
+Z17 !s107 C:\Users\Asus\Desktop\verilog\P2\Q2\Q2_TB.v|
+Z18 !s90 -reportprogress|300|-work|work|-stats=none|C:\Users\Asus\Desktop\verilog\P2\Q2\Q2_TB.v|
+!i113 1
+R9
+R10
+n@q1_@circuit_@t@b
+vQ2_Circuit
+Z19 !s110 1636127328
+!i10b 1
+!s100 V0oZ@C]AAZdd503zbH5H]2
+R0
+I7RE16JcT1XX3?FGjBZd@H0
+R1
+R2
+w1636126706
+8C:\Users\Asus\Desktop\verilog\P2\Q2\Q2_verilog.v
+FC:\Users\Asus\Desktop\verilog\P2\Q2\Q2_verilog.v
+!i122 8
+L0 2 11
+R6
+r1
+!s85 0
+31
+Z20 !s108 1636127328.000000
+!s107 C:\Users\Asus\Desktop\verilog\P2\Q2\Q2_verilog.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\Asus\Desktop\verilog\P2\Q2\Q2_verilog.v|
+!i113 1
+R9
+R10
+n@q2_@circuit
+vQ2_Circuit_TB
+R19
+!i10b 1
+!s100 []LOa;_07_EFNmUCjUN2h3
+R0
+IojT;aZO0Ve8eaCOIWRbYC3
+R1
+R2
+w1636126932
+R14
+R15
+!i122 9
+R16
+R6
+r1
+!s85 0
+31
+R20
+R17
+R18
+!i113 1
+R9
+R10
+n@q2_@circuit_@t@b
+vQ3_Circuit
+R11
+!i10b 1
+!s100 cbf6Zk7_e3IM5U5P]AC6e2
+R0
+IhbR7HAfdbgaSMYI@3WID>0
+R1
+R2
+R12
+R3
+R4
+!i122 36
+L0 29 10
+R6
+r1
+!s85 0
+31
+R13
+R7
+R8
+!i113 1
+R9
+R10
+n@q3_@circuit
+vQ3_Circuit_Assign
+R11
+!i10b 1
+!s100 ZGEdZX;_Jgm<EL?6F7jZD0
+R0
+I=YDYz3]L@R?^mIoDzHGNM2
+R1
+R2
+R12
+R3
+R4
+!i122 36
+R5
+R6
+r1
+!s85 0
+31
+R13
+R7
+R8
+!i113 1
+R9
+R10
+n@q3_@circuit_@assign
+vQ3_Circuit_TB
+!s110 1636138683
+!i10b 1
+!s100 ;`APX`C9o>GN0^fzUKi=a1
+R0
+IKDL>4YaGW:T<o^:@n^]S@3
+R1
+R2
+w1636138356
+8C:\Users\Asus\Desktop\verilog\P2\Q2\Q3_TB.v
+FC:\Users\Asus\Desktop\verilog\P2\Q2\Q3_TB.v
+!i122 37
+L0 2 15
+R6
+r1
+!s85 0
+31
+!s108 1636138683.000000
+!s107 C:\Users\Asus\Desktop\verilog\P2\Q2\Q3_TB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\Asus\Desktop\verilog\P2\Q2\Q3_TB.v|
+!i113 1
+R9
+R10
+n@q3_@circuit_@t@b

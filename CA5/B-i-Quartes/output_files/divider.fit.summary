@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Dec 29 01:10:05 2021
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : divider
+Top-level Entity Name : divider
+Family : Cyclone IV E
+Device : EP4CE6E22A7
+Timing Models : Final
+Total logic elements : 15 / 6,272 ( < 1 % )
+    Total combinational functions : 15 / 6,272 ( < 1 % )
+    Dedicated logic registers : 8 / 6,272 ( < 1 % )
+Total registers : 8
+Total pins : 13 / 92 ( 14 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

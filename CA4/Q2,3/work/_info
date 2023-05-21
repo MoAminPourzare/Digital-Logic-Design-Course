@@ -1,0 +1,167 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Asus/Desktop/projects/CA4/Q1
+vMUX2to1
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1639520287
+!i10b 1
+!s100 dA9K3O`H8:^hJmJZHM<TS3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ig?M@VL5R3KN>X4Zf?A14z3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/Asus/Desktop/projects/CA4/Q2
+Z5 w1639519777
+Z6 8C:/Users/Asus/Desktop/projects/CA4/Q2/Q3_verilog.sv
+Z7 FC:/Users/Asus/Desktop/projects/CA4/Q2/Q3_verilog.sv
+!i122 38
+L0 16 7
+Z8 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z9 !s108 1639520286.000000
+Z10 !s107 C:/Users/Asus/Desktop/projects/CA4/Q2/Q3_verilog.sv|
+Z11 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Asus/Desktop/projects/CA4/Q2/Q3_verilog.sv|
+!i113 1
+Z12 o-work work -sv
+Z13 tCvgOpt 0
+n@m@u@x2to1
+vQ1_Dlatch
+R0
+R1
+!i10b 1
+!s100 :04z=aTg=mcKIDzN1_MOL0
+R2
+IbVPJ`VlDU7n7PKd><63nI2
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 38
+L0 11 4
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+n@q1_@dlatch
+vQ2_shifterRegister
+R0
+Z14 !s110 1639518245
+!i10b 1
+!s100 Rd[KKU^fT81?h<l@;O_?S0
+R2
+ILi>TjYHOR1oh@Q=CQ6EKa0
+R3
+S1
+R4
+w1639517252
+8C:/Users/Asus/Desktop/projects/CA4/Q2/Q2_verilog.sv
+FC:/Users/Asus/Desktop/projects/CA4/Q2/Q2_verilog.sv
+!i122 30
+L0 2 11
+R8
+r1
+!s85 0
+31
+Z15 !s108 1639518245.000000
+!s107 C:/Users/Asus/Desktop/projects/CA4/Q2/Q2_verilog.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Asus/Desktop/projects/CA4/Q2/Q2_verilog.sv|
+!i113 1
+R12
+R13
+n@q2_shifter@register
+vQ2_TB
+R0
+R14
+!i10b 1
+!s100 I8b=3AL;bBZAzCIA^h1b63
+R2
+IMGblFAEkT=HfZiYCAO<]?1
+R3
+S1
+R4
+w1639518150
+8C:/Users/Asus/Desktop/projects/CA4/Q2/Q2_TB.sv
+FC:/Users/Asus/Desktop/projects/CA4/Q2/Q2_TB.sv
+!i122 31
+L0 2 23
+R8
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/Asus/Desktop/projects/CA4/Q2/Q2_TB.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Asus/Desktop/projects/CA4/Q2/Q2_TB.sv|
+!i113 1
+R12
+R13
+n@q2_@t@b
+vQ3_FlipFlop
+R0
+R1
+!i10b 1
+!s100 dPcY>44ePKabIm[h9nm>^1
+R2
+II_1]ddBNdzE17Zdj:[@9G1
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 38
+L0 3 7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+n@q3_@flip@flop
+vQ3_FlipFlop_TB
+R0
+R1
+!i10b 1
+!s100 nea03;HPEJ;9i3VS4a?0I3
+R2
+Ig0P`PCoH1RKWW2^LA?I7m2
+R3
+S1
+R4
+w1639519886
+8C:/Users/Asus/Desktop/projects/CA4/Q2/Q3_TB.sv
+FC:/Users/Asus/Desktop/projects/CA4/Q2/Q3_TB.sv
+!i122 39
+L0 2 21
+R8
+r1
+!s85 0
+31
+!s108 1639520287.000000
+!s107 C:/Users/Asus/Desktop/projects/CA4/Q2/Q3_TB.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Asus/Desktop/projects/CA4/Q2/Q3_TB.sv|
+!i113 1
+R12
+R13
+n@q3_@flip@flop_@t@b

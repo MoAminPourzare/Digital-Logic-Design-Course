@@ -1,0 +1,3 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,tanx:inst1|multiplier:inst3|lpm_mult:lpm_mult_component|mult_qfn:auto_generated|mac_out2,
+PORT_SWAPPING,PORT_SWAPPING_FINISHED,tanx:inst1|multiplier:inst3|lpm_mult:lpm_mult_component|mult_qfn:auto_generated|mac_mult1,

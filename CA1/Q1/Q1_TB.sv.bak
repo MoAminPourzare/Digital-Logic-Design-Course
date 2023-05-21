@@ -1,0 +1,12 @@
+`timescale 1ns/1ns
+module NOT_NAND_TB();
+	reg aa=1,bb=1,cc=1;
+	wire ww1,ww2;
+	NAND_gate G1(aa,bb,ww1);
+	NOT_gate G2(cc,ww2);
+	initial begin
+	#90 bb=0;cc=0;
+	#130 bb=1;cc=1;
+	#60 $stop;
+	end
+endmodule

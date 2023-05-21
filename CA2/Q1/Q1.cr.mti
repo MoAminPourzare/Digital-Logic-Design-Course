@@ -1,0 +1,17 @@
+C:/Users/Asus/Desktop/verilog/P2/Q1/Q1_TB.v {1 {vlog -work work -stats=none C:/Users/Asus/Desktop/verilog/P2/Q1/Q1_TB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Q1_Circuit_TB
+
+Top level modules:
+	Q1_Circuit_TB
+
+} {} {}} C:/Users/Asus/Desktop/verilog/P2/Q1/Q1_VERILOG.v {1 {vlog -work work -stats=none C:/Users/Asus/Desktop/verilog/P2/Q1/Q1_VERILOG.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Q1_Circuit
+-- Compiling module Notif1
+-- Compiling module NOT_gate
+
+Top level modules:
+	Q1_Circuit
+
+} {} {}}

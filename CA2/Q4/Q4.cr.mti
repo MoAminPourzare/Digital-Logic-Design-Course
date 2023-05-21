@@ -1,0 +1,16 @@
+C:/Users/Asus/Desktop/verilog/P2/Q4/Q4_verilog.v {1 {vlog -work work -stats=none {C:\Users\Asus\Desktop\verilog\P2\Q4\Q4_verilog.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module BLOCK
+-- Compiling module Q4_Circuit
+
+Top level modules:
+	Q4_Circuit
+
+} {} {}} C:/Users/Asus/Desktop/verilog/P2/Q4/Q4_TB.v {1 {vlog -work work -stats=none {C:\Users\Asus\Desktop\verilog\P2\Q4\Q4_TB.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Q4_Circuit_TB
+
+Top level modules:
+	Q4_Circuit_TB
+
+} {} {}}

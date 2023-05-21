@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/New folder
+vhard_block
+Z0 !s110 1640769538
+!i10b 1
+!s100 Z1UCL9DFT;mPnQia7X@Q`2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IdheFOIbeYk@ePDg`Y;@ZE2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/Asus/Desktop/CA5/C-i-Quartus
+Z4 w1640767582
+Z5 8C:/Users/Asus/Desktop/CA5/C-i-Quartus/simulation/modelsim/Orthogonal.vo
+Z6 FC:/Users/Asus/Desktop/CA5/C-i-Quartus/simulation/modelsim/Orthogonal.vo
+!i122 10
+L0 946 34
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1640769538.000000
+Z9 !s107 C:/Users/Asus/Desktop/CA5/C-i-Quartus/simulation/modelsim/Orthogonal.vo|
+Z10 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Asus/Desktop/CA5/C-i-Quartus/simulation/modelsim/Orthogonal.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vOrthogonal
+R0
+!i10b 1
+!s100 J1Hb4<oceYBnI_5beR<DA0
+R1
+I7^gCKLNNP:=9Xl<zbc7oX3
+R2
+R3
+R4
+R5
+R6
+!i122 10
+L0 32 913
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@orthogonal
+vOrthogonal_TB
+!s110 1640769539
+!i10b 1
+!s100 eRSeSAQ5o;Gon?Seg[Pm73
+R1
+I2IEoNZ@Pj^Wocb10Z:ZzM0
+R2
+R3
+w1640769536
+8C:\Users\Asus\Desktop\CA5\C-i-Quartus\Orthogonal_TB.v
+FC:\Users\Asus\Desktop\CA5\C-i-Quartus\Orthogonal_TB.v
+!i122 11
+L0 2 25
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:\Users\Asus\Desktop\CA5\C-i-Quartus\Orthogonal_TB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\Asus\Desktop\CA5\C-i-Quartus\Orthogonal_TB.v|
+!i113 1
+R11
+R12
+n@orthogonal_@t@b

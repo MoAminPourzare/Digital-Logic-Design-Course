@@ -1,0 +1,20 @@
+C:/Users/Asus/Desktop/verilog/P2/Q2/Q3_TB.v {1 {vlog -work work -stats=none {C:\Users\Asus\Desktop\verilog\P2\Q2\Q3_TB.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Q3_Circuit_TB
+
+Top level modules:
+	Q3_Circuit_TB
+
+} {} {}} C:/Users/Asus/Desktop/verilog/P2/Q2/Q3_verilog.v {1 {vlog -work work -stats=none {C:\Users\Asus\Desktop\verilog\P2\Q2\Q3_verilog.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Q1_Circuit_3
+-- Compiling module Notif1
+-- Compiling module NOT_gate
+-- Compiling module Q3_Circuit
+-- Compiling module Q3_Circuit_Assign
+
+Top level modules:
+	Q3_Circuit
+	Q3_Circuit_Assign
+
+} {} {}}

@@ -1,0 +1,89 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Asus/Desktop/verilog/soal 6
+vNAND_gate
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1636478056
+!i10b 1
+!s100 8O[]=cEV1B:Nn[f[;z?Lf0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IooN:]>o:J8aoA?2^WG^Ai0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/Asus/Desktop/verilog/Q1
+Z5 w1636478041
+Z6 8C:/Users/Asus/Desktop/verilog/Q1/Q1_verilog.sv
+Z7 FC:/Users/Asus/Desktop/verilog/Q1/Q1_verilog.sv
+!i122 5
+L0 2 9
+Z8 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z9 !s108 1636478056.000000
+Z10 !s107 C:/Users/Asus/Desktop/verilog/Q1/Q1_verilog.sv|
+Z11 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Asus/Desktop/verilog/Q1/Q1_verilog.sv|
+!i113 1
+Z12 o-work work -sv
+Z13 tCvgOpt 0
+n@n@a@n@d_gate
+vNOT_gate
+R0
+R1
+!i10b 1
+!s100 Ld7`XZEOEQESNk0>i3]R:0
+R2
+IV6^M8L_ldZW]PgB]DLfhQ0
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 5
+L0 12 6
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+n@n@o@t_gate
+vNOT_NAND_TB
+R0
+R1
+!i10b 1
+!s100 K@HhT9MHkEW;?MIXMn=P[2
+R2
+IaUiHMP3U16_5HhRFKOSn;3
+R3
+S1
+R4
+w1636478039
+8C:/Users/Asus/Desktop/verilog/Q1/Q1_TB.sv
+FC:/Users/Asus/Desktop/verilog/Q1/Q1_TB.sv
+!i122 6
+L0 2 11
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Asus/Desktop/verilog/Q1/Q1_TB.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Asus/Desktop/verilog/Q1/Q1_TB.sv|
+!i113 1
+R12
+R13
+n@n@o@t_@n@a@n@d_@t@b

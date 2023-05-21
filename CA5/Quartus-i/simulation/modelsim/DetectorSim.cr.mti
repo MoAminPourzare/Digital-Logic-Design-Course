@@ -1,0 +1,23 @@
+C:/Users/Asus/Desktop/CA5/Quartus-i/simulation/modelsim/detector_verilog.vo {1 {vlog -work work -stats=none C:/Users/Asus/Desktop/CA5/Quartus-i/simulation/modelsim/detector_verilog.vo
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module detector_verilog
+-- Compiling module hard_block
+
+Top level modules:
+	detector_verilog
+
+} {} {}} C:/Users/Asus/Desktop/CA5/Quartus-i/simulation/modelsim/pre_verilog.v {1 {vlog -work work -stats=none C:/Users/Asus/Desktop/CA5/Quartus-i/simulation/modelsim/pre_verilog.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module moore10110
+
+Top level modules:
+	moore10110
+
+} {} {}} C:/Users/Asus/Desktop/CA5/Quartus-i/simulation/modelsim/detector_TB.v {1 {vlog -work work -stats=none C:/Users/Asus/Desktop/CA5/Quartus-i/simulation/modelsim/detector_TB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module moore10110_TB
+
+Top level modules:
+	moore10110_TB
+
+} {} {}}

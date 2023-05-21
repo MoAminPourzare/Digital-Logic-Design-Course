@@ -1,0 +1,14 @@
+`timescale 1ns/1ns
+module Q1_TB();
+	logic [15:0] mm = 0,nn = 0;
+	logic [15:0] outF,outF_y;
+	logic [2:0] opc = 3'b0;
+	logic cc = 0;
+	wire zer,zer_y,neg,neg_y;
+	Q1 ALU1(nn,mm,cc,opc,outF,zer,neg);
+	Q1_yosys ALU2(nn,mm,cc,opc,outF_y,zer_y,neg_y);
+	initial repeat(30) #30 opc = opc + 1'b1;
+	initial repeat(30) #30 cc = cc + 1'b1;
+	initial repeat(30) #30 mm = $random;
+	initial repeat(30) #30 nn = $random;
+endmodule

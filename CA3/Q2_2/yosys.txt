@@ -1,0 +1,1606 @@
+Microsoft Windows [Version 10.0.19042.1348]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Asus\Desktop\projects\aa\src>yosys.exe
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b1, i686-w64-mingw32.static-g++ 5.5.0 -Os)
+
+
+yosys> read_verilog -sv ccv.sv
+1. Executing Verilog-2005 frontend: ccv.sv
+Parsing SystemVerilog input from `ccv.sv' to AST representation.
+Generating RTLIL representation for module `\Q2'.
+Generating RTLIL representation for module `\Shifter2bit1'.
+Generating RTLIL representation for module `\Adder'.
+Generating RTLIL representation for module `\And16bit'.
+Generating RTLIL representation for module `\Mux4'.
+Generating RTLIL representation for module `\Mux2'.
+Generating RTLIL representation for module `\Or16bit'.
+Generating RTLIL representation for module `\Orbits'.
+Generating RTLIL representation for module `\Inventer'.
+Successfully finished Verilog frontend.
+
+yosys> synth -auto-top
+
+2. Executing SYNTH pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Finding top of design hierarchy..
+root of   0 design levels: Inventer
+root of   0 design levels: Orbits
+root of   0 design levels: Or16bit
+root of   0 design levels: Mux2
+root of   0 design levels: Mux4
+root of   0 design levels: And16bit
+root of   0 design levels: Adder
+root of   0 design levels: Shifter2bit1
+root of   1 design levels: Q2
+Automatically selected Q2 as design top module.
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \Q2
+Used module:     \Or16bit
+Used module:     \And16bit
+Used module:     \Inventer
+Used module:     \Adder
+Used module:     \Orbits
+Used module:     \Mux4
+Used module:     \Shifter2bit1
+
+2.1.3. Analyzing design hierarchy..
+Top module:  \Q2
+Used module:     \Or16bit
+Used module:     \And16bit
+Used module:     \Inventer
+Used module:     \Adder
+Used module:     \Orbits
+Used module:     \Mux4
+Used module:     \Shifter2bit1
+Removing unused module `\Mux2'.
+Removed 1 unused modules.
+Mapping positional arguments of cell Q2.G2 (Or16bit).
+Mapping positional arguments of cell Q2.G3 (And16bit).
+Mapping positional arguments of cell Q2.G1 (Inventer).
+Mapping positional arguments of cell Q2.A1 (Adder).
+Mapping positional arguments of cell Q2.G4 (Orbits).
+Mapping positional arguments of cell Q2.M2 (Mux4).
+Mapping positional arguments of cell Q2.M1 (Mux4).
+Mapping positional arguments of cell Q2.S2 (Shifter2bit1).
+Mapping positional arguments of cell Q2.S1 (Shifter2bit1).
+Warning: Resizing cell port Q2.A1.W from 1 bits to 16 bits.
+Warning: Resizing cell port Q2.A1.co from 16 bits to 1 bits.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+2.2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+
+2.2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Orbits.
+Optimizing module Or16bit.
+Optimizing module Inventer.
+Optimizing module Mux4.
+<suppressed ~1 debug messages>
+Optimizing module And16bit.
+Optimizing module Adder.
+Optimizing module Shifter2bit1.
+<suppressed ~1 debug messages>
+Optimizing module Q2.
+
+2.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Orbits..
+Finding unused cells or wires in module \Or16bit..
+Finding unused cells or wires in module \Inventer..
+Finding unused cells or wires in module \Mux4..
+Finding unused cells or wires in module \And16bit..
+Finding unused cells or wires in module \Adder..
+Finding unused cells or wires in module \Shifter2bit1..
+Finding unused cells or wires in module \Q2..
+Removed 0 unused cells and 13 unused wires.
+<suppressed ~8 debug messages>
+
+2.5. Executing CHECK pass (checking for obvious problems).
+checking module Adder..
+checking module And16bit..
+checking module Inventer..
+checking module Mux4..
+checking module Or16bit..
+checking module Orbits..
+checking module Q2..
+checking module Shifter2bit1..
+found and reported 0 problems.
+
+2.6. Executing OPT pass (performing simple optimizations).
+
+2.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Adder.
+Optimizing module And16bit.
+Optimizing module Inventer.
+Optimizing module Mux4.
+Optimizing module Or16bit.
+Optimizing module Orbits.
+Optimizing module Q2.
+Optimizing module Shifter2bit1.
+
+2.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Adder'.
+Finding identical cells in module `\And16bit'.
+Finding identical cells in module `\Inventer'.
+Finding identical cells in module `\Mux4'.
+Finding identical cells in module `\Or16bit'.
+Finding identical cells in module `\Orbits'.
+Finding identical cells in module `\Q2'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\Shifter2bit1'.
+Removed a total of 1 cells.
+
+2.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \Adder..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \And16bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Inventer..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Mux4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \Or16bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Orbits..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Q2..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Shifter2bit1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+2.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \Adder.
+  Optimizing cells in module \And16bit.
+  Optimizing cells in module \Inventer.
+  Optimizing cells in module \Mux4.
+  Optimizing cells in module \Or16bit.
+  Optimizing cells in module \Orbits.
+    New input vector for $reduce_or cell $reduce_or$ccv.sv:54$26: { \A [0] \A [1] \A [2] \A [3] \A [4] \A [5] \A [6] \A [7] \A [8] \A [9] \A [10] \A [11] \A [12] \A [13] \A [14] \A [15] }
+  Optimizing cells in module \Orbits.
+  Optimizing cells in module \Q2.
+  Optimizing cells in module \Shifter2bit1.
+Performed a total of 1 changes.
+
+2.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Adder'.
+Finding identical cells in module `\And16bit'.
+Finding identical cells in module `\Inventer'.
+Finding identical cells in module `\Mux4'.
+Finding identical cells in module `\Or16bit'.
+Finding identical cells in module `\Orbits'.
+Finding identical cells in module `\Q2'.
+Finding identical cells in module `\Shifter2bit1'.
+Removed a total of 0 cells.
+
+2.6.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Adder..
+Finding unused cells or wires in module \And16bit..
+Finding unused cells or wires in module \Inventer..
+Finding unused cells or wires in module \Mux4..
+Finding unused cells or wires in module \Or16bit..
+Finding unused cells or wires in module \Orbits..
+Finding unused cells or wires in module \Q2..
+Finding unused cells or wires in module \Shifter2bit1..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Adder.
+Optimizing module And16bit.
+Optimizing module Inventer.
+Optimizing module Mux4.
+Optimizing module Or16bit.
+Optimizing module Orbits.
+Optimizing module Q2.
+Optimizing module Shifter2bit1.
+
+2.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \Adder..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \And16bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Inventer..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Mux4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \Or16bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Orbits..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Q2..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Shifter2bit1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+2.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \Adder.
+  Optimizing cells in module \And16bit.
+  Optimizing cells in module \Inventer.
+  Optimizing cells in module \Mux4.
+  Optimizing cells in module \Or16bit.
+  Optimizing cells in module \Orbits.
+  Optimizing cells in module \Q2.
+  Optimizing cells in module \Shifter2bit1.
+Performed a total of 0 changes.
+
+2.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Adder'.
+Finding identical cells in module `\And16bit'.
+Finding identical cells in module `\Inventer'.
+Finding identical cells in module `\Mux4'.
+Finding identical cells in module `\Or16bit'.
+Finding identical cells in module `\Orbits'.
+Finding identical cells in module `\Q2'.
+Finding identical cells in module `\Shifter2bit1'.
+Removed a total of 0 cells.
+
+2.6.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Adder..
+Finding unused cells or wires in module \And16bit..
+Finding unused cells or wires in module \Inventer..
+Finding unused cells or wires in module \Mux4..
+Finding unused cells or wires in module \Or16bit..
+Finding unused cells or wires in module \Orbits..
+Finding unused cells or wires in module \Q2..
+Finding unused cells or wires in module \Shifter2bit1..
+
+2.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Adder.
+Optimizing module And16bit.
+Optimizing module Inventer.
+Optimizing module Mux4.
+Optimizing module Or16bit.
+Optimizing module Orbits.
+Optimizing module Q2.
+Optimizing module Shifter2bit1.
+
+2.6.16. Finished OPT passes. (There is nothing left to do.)
+
+2.7. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 2) from port B of cell Mux4.$eq$ccv.sv:37$14 ($eq).
+Removed cell Mux4.$ternary$ccv.sv:40$17 ($mux).
+Removed top 15 bits (of 16) from wire Q2.wAdd.
+
+2.8. Executing PEEPOPT pass (run peephole optimizers).
+
+2.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Adder..
+Finding unused cells or wires in module \And16bit..
+Finding unused cells or wires in module \Inventer..
+Finding unused cells or wires in module \Mux4..
+Finding unused cells or wires in module \Or16bit..
+Finding unused cells or wires in module \Orbits..
+Finding unused cells or wires in module \Q2..
+Finding unused cells or wires in module \Shifter2bit1..
+Removed 1 unused cells and 3 unused wires.
+<suppressed ~3 debug messages>
+
+2.10. Executing TECHMAP pass (map to technology primitives).
+
+2.10.1. Executing Verilog-2005 frontend: C:\Users\Asus\Desktop\projects\aa\src\share\cmp2lut.v
+Parsing Verilog input from `C:\Users\Asus\Desktop\projects\aa\src\share\cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+2.10.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~36 debug messages>
+
+2.11. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module Adder:
+  creating $macc model for $add$ccv.sv:28$10 ($add).
+  creating $macc model for $add$ccv.sv:28$11 ($add).
+  merging $macc model for $add$ccv.sv:28$10 into $add$ccv.sv:28$11.
+  creating $alu model for $macc $add$ccv.sv:28$11.
+  creating $alu cell for $add$ccv.sv:28$11: $auto$alumacc.cc:474:replace_alu$30
+  created 1 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module And16bit:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module Inventer:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module Mux4:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module Or16bit:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module Orbits:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module Q2:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module Shifter2bit1:
+  created 0 $alu and 0 $macc cells.
+
+2.12. Executing SHARE pass (SAT-based resource sharing).
+
+2.13. Executing OPT pass (performing simple optimizations).
+
+2.13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Adder.
+Optimizing module And16bit.
+Optimizing module Inventer.
+Optimizing module Mux4.
+Optimizing module Or16bit.
+Optimizing module Orbits.
+Optimizing module Q2.
+Optimizing module Shifter2bit1.
+
+2.13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Adder'.
+Finding identical cells in module `\And16bit'.
+Finding identical cells in module `\Inventer'.
+Finding identical cells in module `\Mux4'.
+Finding identical cells in module `\Or16bit'.
+Finding identical cells in module `\Orbits'.
+Finding identical cells in module `\Q2'.
+Finding identical cells in module `\Shifter2bit1'.
+Removed a total of 0 cells.
+
+2.13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \Adder..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \And16bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Inventer..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Mux4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \Or16bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Orbits..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Q2..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Shifter2bit1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+2.13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \Adder.
+  Optimizing cells in module \And16bit.
+  Optimizing cells in module \Inventer.
+  Optimizing cells in module \Mux4.
+  Optimizing cells in module \Or16bit.
+  Optimizing cells in module \Orbits.
+  Optimizing cells in module \Q2.
+  Optimizing cells in module \Shifter2bit1.
+Performed a total of 0 changes.
+
+2.13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Adder'.
+Finding identical cells in module `\And16bit'.
+Finding identical cells in module `\Inventer'.
+Finding identical cells in module `\Mux4'.
+Finding identical cells in module `\Or16bit'.
+Finding identical cells in module `\Orbits'.
+Finding identical cells in module `\Q2'.
+Finding identical cells in module `\Shifter2bit1'.
+Removed a total of 0 cells.
+
+2.13.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Adder..
+Finding unused cells or wires in module \And16bit..
+Finding unused cells or wires in module \Inventer..
+Finding unused cells or wires in module \Mux4..
+Finding unused cells or wires in module \Or16bit..
+Finding unused cells or wires in module \Orbits..
+Finding unused cells or wires in module \Q2..
+Finding unused cells or wires in module \Shifter2bit1..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+2.13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Adder.
+Optimizing module And16bit.
+Optimizing module Inventer.
+Optimizing module Mux4.
+Optimizing module Or16bit.
+Optimizing module Orbits.
+Optimizing module Q2.
+Optimizing module Shifter2bit1.
+
+2.13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \Adder..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \And16bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Inventer..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Mux4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \Or16bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Orbits..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Q2..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Shifter2bit1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+2.13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \Adder.
+  Optimizing cells in module \And16bit.
+  Optimizing cells in module \Inventer.
+  Optimizing cells in module \Mux4.
+  Optimizing cells in module \Or16bit.
+  Optimizing cells in module \Orbits.
+  Optimizing cells in module \Q2.
+  Optimizing cells in module \Shifter2bit1.
+Performed a total of 0 changes.
+
+2.13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Adder'.
+Finding identical cells in module `\And16bit'.
+Finding identical cells in module `\Inventer'.
+Finding identical cells in module `\Mux4'.
+Finding identical cells in module `\Or16bit'.
+Finding identical cells in module `\Orbits'.
+Finding identical cells in module `\Q2'.
+Finding identical cells in module `\Shifter2bit1'.
+Removed a total of 0 cells.
+
+2.13.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Adder..
+Finding unused cells or wires in module \And16bit..
+Finding unused cells or wires in module \Inventer..
+Finding unused cells or wires in module \Mux4..
+Finding unused cells or wires in module \Or16bit..
+Finding unused cells or wires in module \Orbits..
+Finding unused cells or wires in module \Q2..
+Finding unused cells or wires in module \Shifter2bit1..
+
+2.13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Adder.
+Optimizing module And16bit.
+Optimizing module Inventer.
+Optimizing module Mux4.
+Optimizing module Or16bit.
+Optimizing module Orbits.
+Optimizing module Q2.
+Optimizing module Shifter2bit1.
+
+2.13.16. Finished OPT passes. (There is nothing left to do.)
+
+2.14. Executing FSM pass (extract and optimize FSM).
+
+2.14.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+2.14.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.14.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.14.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Adder..
+Finding unused cells or wires in module \And16bit..
+Finding unused cells or wires in module \Inventer..
+Finding unused cells or wires in module \Mux4..
+Finding unused cells or wires in module \Or16bit..
+Finding unused cells or wires in module \Orbits..
+Finding unused cells or wires in module \Q2..
+Finding unused cells or wires in module \Shifter2bit1..
+
+2.14.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.14.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.14.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.14.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.15. Executing OPT pass (performing simple optimizations).
+
+2.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Adder.
+Optimizing module And16bit.
+Optimizing module Inventer.
+Optimizing module Mux4.
+Optimizing module Or16bit.
+Optimizing module Orbits.
+Optimizing module Q2.
+Optimizing module Shifter2bit1.
+
+2.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Adder'.
+Finding identical cells in module `\And16bit'.
+Finding identical cells in module `\Inventer'.
+Finding identical cells in module `\Mux4'.
+Finding identical cells in module `\Or16bit'.
+Finding identical cells in module `\Orbits'.
+Finding identical cells in module `\Q2'.
+Finding identical cells in module `\Shifter2bit1'.
+Removed a total of 0 cells.
+
+2.15.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.15.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Adder..
+Finding unused cells or wires in module \And16bit..
+Finding unused cells or wires in module \Inventer..
+Finding unused cells or wires in module \Mux4..
+Finding unused cells or wires in module \Or16bit..
+Finding unused cells or wires in module \Orbits..
+Finding unused cells or wires in module \Q2..
+Finding unused cells or wires in module \Shifter2bit1..
+
+2.15.5. Finished fast OPT passes.
+
+2.16. Executing MEMORY pass.
+
+2.16.1. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+2.16.2. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Adder..
+Finding unused cells or wires in module \And16bit..
+Finding unused cells or wires in module \Inventer..
+Finding unused cells or wires in module \Mux4..
+Finding unused cells or wires in module \Or16bit..
+Finding unused cells or wires in module \Orbits..
+Finding unused cells or wires in module \Q2..
+Finding unused cells or wires in module \Shifter2bit1..
+
+2.16.3. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.16.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Adder..
+Finding unused cells or wires in module \And16bit..
+Finding unused cells or wires in module \Inventer..
+Finding unused cells or wires in module \Mux4..
+Finding unused cells or wires in module \Or16bit..
+Finding unused cells or wires in module \Orbits..
+Finding unused cells or wires in module \Q2..
+Finding unused cells or wires in module \Shifter2bit1..
+
+2.16.5. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Adder..
+Finding unused cells or wires in module \And16bit..
+Finding unused cells or wires in module \Inventer..
+Finding unused cells or wires in module \Mux4..
+Finding unused cells or wires in module \Or16bit..
+Finding unused cells or wires in module \Orbits..
+Finding unused cells or wires in module \Q2..
+Finding unused cells or wires in module \Shifter2bit1..
+
+2.18. Executing OPT pass (performing simple optimizations).
+
+2.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Adder.
+Optimizing module And16bit.
+Optimizing module Inventer.
+Optimizing module Mux4.
+Optimizing module Or16bit.
+Optimizing module Orbits.
+Optimizing module Q2.
+Optimizing module Shifter2bit1.
+
+2.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Adder'.
+Finding identical cells in module `\And16bit'.
+Finding identical cells in module `\Inventer'.
+Finding identical cells in module `\Mux4'.
+Finding identical cells in module `\Or16bit'.
+Finding identical cells in module `\Orbits'.
+Finding identical cells in module `\Q2'.
+Finding identical cells in module `\Shifter2bit1'.
+Removed a total of 0 cells.
+
+2.18.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Adder..
+Finding unused cells or wires in module \And16bit..
+Finding unused cells or wires in module \Inventer..
+Finding unused cells or wires in module \Mux4..
+Finding unused cells or wires in module \Or16bit..
+Finding unused cells or wires in module \Orbits..
+Finding unused cells or wires in module \Q2..
+Finding unused cells or wires in module \Shifter2bit1..
+
+2.18.5. Finished fast OPT passes.
+
+2.19. Executing MEMORY_MAP pass (converting $mem cells to logic and flip-flops).
+
+2.20. Executing OPT pass (performing simple optimizations).
+
+2.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Adder.
+Optimizing module And16bit.
+Optimizing module Inventer.
+Optimizing module Mux4.
+Optimizing module Or16bit.
+Optimizing module Orbits.
+Optimizing module Q2.
+Optimizing module Shifter2bit1.
+
+2.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Adder'.
+Finding identical cells in module `\And16bit'.
+Finding identical cells in module `\Inventer'.
+Finding identical cells in module `\Mux4'.
+Finding identical cells in module `\Or16bit'.
+Finding identical cells in module `\Orbits'.
+Finding identical cells in module `\Q2'.
+Finding identical cells in module `\Shifter2bit1'.
+Removed a total of 0 cells.
+
+2.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \Adder..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \And16bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Inventer..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Mux4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \Or16bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Orbits..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Q2..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \Shifter2bit1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+2.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \Adder.
+  Optimizing cells in module \And16bit.
+  Optimizing cells in module \Inventer.
+  Optimizing cells in module \Mux4.
+  Optimizing cells in module \Or16bit.
+  Optimizing cells in module \Orbits.
+  Optimizing cells in module \Q2.
+  Optimizing cells in module \Shifter2bit1.
+Performed a total of 0 changes.
+
+2.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Adder'.
+Finding identical cells in module `\And16bit'.
+Finding identical cells in module `\Inventer'.
+Finding identical cells in module `\Mux4'.
+Finding identical cells in module `\Or16bit'.
+Finding identical cells in module `\Orbits'.
+Finding identical cells in module `\Q2'.
+Finding identical cells in module `\Shifter2bit1'.
+Removed a total of 0 cells.
+
+2.20.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.20.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Adder..
+Finding unused cells or wires in module \And16bit..
+Finding unused cells or wires in module \Inventer..
+Finding unused cells or wires in module \Mux4..
+Finding unused cells or wires in module \Or16bit..
+Finding unused cells or wires in module \Orbits..
+Finding unused cells or wires in module \Q2..
+Finding unused cells or wires in module \Shifter2bit1..
+
+2.20.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Adder.
+Optimizing module And16bit.
+Optimizing module Inventer.
+Optimizing module Mux4.
+Optimizing module Or16bit.
+Optimizing module Orbits.
+Optimizing module Q2.
+Optimizing module Shifter2bit1.
+
+2.20.9. Finished OPT passes. (There is nothing left to do.)
+
+2.21. Executing TECHMAP pass (map to technology primitives).
+
+2.21.1. Executing Verilog-2005 frontend: <techmap.v>
+Parsing Verilog input from `<techmap.v>' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+2.21.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=16\B_WIDTH=16\Y_WIDTH=17 for cells of type $alu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu\WIDTH=17 for cells of type $lcu.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $reduce_or.
+No more expansions possible.
+<suppressed ~244 debug messages>
+
+2.22. Executing OPT pass (performing simple optimizations).
+
+2.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Adder.
+<suppressed ~24 debug messages>
+Optimizing module And16bit.
+Optimizing module Inventer.
+Optimizing module Mux4.
+<suppressed ~50 debug messages>
+Optimizing module Or16bit.
+Optimizing module Orbits.
+Optimizing module Q2.
+Optimizing module Shifter2bit1.
+
+2.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Adder'.
+Finding identical cells in module `\And16bit'.
+Finding identical cells in module `\Inventer'.
+Finding identical cells in module `\Mux4'.
+Finding identical cells in module `\Or16bit'.
+Finding identical cells in module `\Orbits'.
+Finding identical cells in module `\Q2'.
+Finding identical cells in module `\Shifter2bit1'.
+Removed a total of 0 cells.
+
+2.22.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Adder..
+Finding unused cells or wires in module \And16bit..
+Finding unused cells or wires in module \Inventer..
+Finding unused cells or wires in module \Mux4..
+Finding unused cells or wires in module \Or16bit..
+Finding unused cells or wires in module \Orbits..
+Finding unused cells or wires in module \Q2..
+Finding unused cells or wires in module \Shifter2bit1..
+Removed 19 unused cells and 30 unused wires.
+<suppressed ~22 debug messages>
+
+2.22.5. Finished fast OPT passes.
+
+2.23. Executing ABC pass (technology mapping using ABC).
+
+2.23.1. Extracting gate netlist of module `\Adder' to `<abc-temp-dir>/input.blif'..
+Extracted 113 gates and 146 wires to a netlist network with 33 inputs and 17 outputs.
+
+2.23.1.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC:
+ABC: + read_blif <abc-temp-dir>/input.blif
+ABC: + read_library <abc-temp-dir>/stdcells.genlib
+ABC: Entered genlib library with 17 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash
+ABC: + dretime
+ABC: + retime
+ABC: + map
+ABC: + write_blif <abc-temp-dir>/output.blif
+
+2.23.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        5
+ABC RESULTS:            ANDNOT cells:        5
+ABC RESULTS:              AOI3 cells:       10
+ABC RESULTS:              NAND cells:       10
+ABC RESULTS:               NOR cells:        8
+ABC RESULTS:               NOT cells:        6
+ABC RESULTS:              OAI3 cells:       13
+ABC RESULTS:                OR cells:        4
+ABC RESULTS:             ORNOT cells:        5
+ABC RESULTS:              XNOR cells:       21
+ABC RESULTS:               XOR cells:       12
+ABC RESULTS:        internal signals:       96
+ABC RESULTS:           input signals:       33
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+
+2.23.2. Extracting gate netlist of module `\And16bit' to `<abc-temp-dir>/input.blif'..
+Extracted 16 gates and 48 wires to a netlist network with 32 inputs and 16 outputs.
+
+2.23.2.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC:
+ABC: + read_blif <abc-temp-dir>/input.blif
+ABC: + read_library <abc-temp-dir>/stdcells.genlib
+ABC: Entered genlib library with 17 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash
+ABC: + dretime
+ABC: + retime
+ABC: + map
+ABC: + write_blif <abc-temp-dir>/output.blif
+
+2.23.2.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       16
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:       32
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+
+2.23.3. Extracting gate netlist of module `\Inventer' to `<abc-temp-dir>/input.blif'..
+Extracted 16 gates and 32 wires to a netlist network with 16 inputs and 16 outputs.
+
+2.23.3.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC:
+ABC: + read_blif <abc-temp-dir>/input.blif
+ABC: + read_library <abc-temp-dir>/stdcells.genlib
+ABC: Entered genlib library with 17 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash
+ABC: + dretime
+ABC: + retime
+ABC: + map
+ABC: + write_blif <abc-temp-dir>/output.blif
+
+2.23.3.2. Re-integrating ABC results.
+ABC RESULTS:               NOT cells:       16
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:       16
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+
+2.23.4. Extracting gate netlist of module `\Mux4' to `<abc-temp-dir>/input.blif'..
+Extracted 53 gates and 120 wires to a netlist network with 66 inputs and 16 outputs.
+
+2.23.4.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC:
+ABC: + read_blif <abc-temp-dir>/input.blif
+ABC: + read_library <abc-temp-dir>/stdcells.genlib
+ABC: Entered genlib library with 17 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash
+ABC: + dretime
+ABC: + retime
+ABC: + map
+ABC: + write_blif <abc-temp-dir>/output.blif
+
+2.23.4.2. Re-integrating ABC results.
+ABC RESULTS:               MUX cells:       48
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:             ORNOT cells:        2
+ABC RESULTS:        internal signals:       38
+ABC RESULTS:           input signals:       66
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+
+2.23.5. Extracting gate netlist of module `\Or16bit' to `<abc-temp-dir>/input.blif'..
+Extracted 16 gates and 48 wires to a netlist network with 32 inputs and 16 outputs.
+
+2.23.5.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC:
+ABC: + read_blif <abc-temp-dir>/input.blif
+ABC: + read_library <abc-temp-dir>/stdcells.genlib
+ABC: Entered genlib library with 17 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash
+ABC: + dretime
+ABC: + retime
+ABC: + map
+ABC: + write_blif <abc-temp-dir>/output.blif
+
+2.23.5.2. Re-integrating ABC results.
+ABC RESULTS:                OR cells:       16
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:       32
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+
+2.23.6. Extracting gate netlist of module `\Orbits' to `<abc-temp-dir>/input.blif'..
+Extracted 15 gates and 31 wires to a netlist network with 16 inputs and 1 outputs.
+
+2.23.6.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC:
+ABC: + read_blif <abc-temp-dir>/input.blif
+ABC: + read_library <abc-temp-dir>/stdcells.genlib
+ABC: Entered genlib library with 17 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash
+ABC: + dretime
+ABC: + retime
+ABC: + map
+ABC: + write_blif <abc-temp-dir>/output.blif
+
+2.23.6.2. Re-integrating ABC results.
+ABC RESULTS:               NOR cells:        5
+ABC RESULTS:                OR cells:        5
+ABC RESULTS:             ORNOT cells:        5
+ABC RESULTS:        internal signals:       14
+ABC RESULTS:           input signals:       16
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+2.23.7. Extracting gate netlist of module `\Q2' to `<abc-temp-dir>/input.blif'..
+Extracted 7 gates and 11 wires to a netlist network with 4 inputs and 4 outputs.
+
+2.23.7.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC:
+ABC: + read_blif <abc-temp-dir>/input.blif
+ABC: + read_library <abc-temp-dir>/stdcells.genlib
+ABC: Entered genlib library with 17 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash
+ABC: + dretime
+ABC: + retime
+ABC: + map
+ABC: + write_blif <abc-temp-dir>/output.blif
+
+2.23.7.2. Re-integrating ABC results.
+ABC RESULTS:            ANDNOT cells:        3
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:        internal signals:        3
+ABC RESULTS:           input signals:        4
+ABC RESULTS:          output signals:        4
+Removing temp directory.
+
+2.23.8. Extracting gate netlist of module `\Shifter2bit1' to `<abc-temp-dir>/input.blif'..
+Extracted 0 gates and 0 wires to a netlist network with 0 inputs and 0 outputs.
+Don't call ABC as there is nothing to map.
+Removing temp directory.
+
+2.24. Executing OPT pass (performing simple optimizations).
+
+2.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Adder.
+Optimizing module And16bit.
+Optimizing module Inventer.
+Optimizing module Mux4.
+Optimizing module Or16bit.
+Optimizing module Orbits.
+Optimizing module Q2.
+Optimizing module Shifter2bit1.
+
+2.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Adder'.
+Finding identical cells in module `\And16bit'.
+Finding identical cells in module `\Inventer'.
+Finding identical cells in module `\Mux4'.
+Finding identical cells in module `\Or16bit'.
+Finding identical cells in module `\Orbits'.
+Finding identical cells in module `\Q2'.
+Finding identical cells in module `\Shifter2bit1'.
+Removed a total of 0 cells.
+
+2.24.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Adder..
+Finding unused cells or wires in module \And16bit..
+Finding unused cells or wires in module \Inventer..
+Finding unused cells or wires in module \Mux4..
+Finding unused cells or wires in module \Or16bit..
+Finding unused cells or wires in module \Orbits..
+Finding unused cells or wires in module \Q2..
+Finding unused cells or wires in module \Shifter2bit1..
+Removed 0 unused cells and 351 unused wires.
+<suppressed ~9 debug messages>
+
+2.24.5. Finished fast OPT passes.
+
+2.25. Executing HIERARCHY pass (managing design hierarchy).
+
+2.25.1. Analyzing design hierarchy..
+Top module:  \Q2
+Used module:     \Adder
+Used module:     \Inventer
+Used module:     \Or16bit
+Used module:     \And16bit
+Used module:     \Orbits
+Used module:     \Mux4
+Used module:     \Shifter2bit1
+
+2.25.2. Analyzing design hierarchy..
+Top module:  \Q2
+Used module:     \Adder
+Used module:     \Inventer
+Used module:     \Or16bit
+Used module:     \And16bit
+Used module:     \Orbits
+Used module:     \Mux4
+Used module:     \Shifter2bit1
+Removed 0 unused modules.
+
+2.26. Printing statistics.
+
+=== Adder ===
+
+   Number of wires:                 87
+   Number of wire bits:            132
+   Number of public wires:           5
+   Number of public wire bits:      50
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 99
+     $_ANDNOT_                       5
+     $_AND_                          5
+     $_AOI3_                        10
+     $_NAND_                        10
+     $_NOR_                          8
+     $_NOT_                          6
+     $_OAI3_                        13
+     $_ORNOT_                        5
+     $_OR_                           4
+     $_XNOR_                        21
+     $_XOR_                         12
+
+=== And16bit ===
+
+   Number of wires:                  3
+   Number of wire bits:             48
+   Number of public wires:           3
+   Number of public wire bits:      48
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 16
+     $_AND_                         16
+
+=== Inventer ===
+
+   Number of wires:                  2
+   Number of wire bits:             32
+   Number of public wires:           2
+   Number of public wire bits:      32
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 16
+     $_NOT_                         16
+
+=== Mux4 ===
+
+   Number of wires:                 41
+   Number of wire bits:            117
+   Number of public wires:           6
+   Number of public wire bits:      82
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 51
+     $_MUX_                         48
+     $_ORNOT_                        2
+     $_OR_                           1
+
+=== Or16bit ===
+
+   Number of wires:                  3
+   Number of wire bits:             48
+   Number of public wires:           3
+   Number of public wire bits:      48
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 16
+     $_OR_                          16
+
+=== Orbits ===
+
+   Number of wires:                 16
+   Number of wire bits:             31
+   Number of public wires:           2
+   Number of public wire bits:      17
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 15
+     $_NOR_                          5
+     $_ORNOT_                        5
+     $_OR_                           5
+
+=== Q2 ===
+
+   Number of wires:                 21
+   Number of wire bits:            172
+   Number of public wires:          19
+   Number of public wire bits:     156
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 14
+     $_ANDNOT_                       3
+     $_NOR_                          1
+     $_NOT_                          1
+     Adder                           1
+     And16bit                        1
+     Inventer                        1
+     Mux4                            2
+     Or16bit                         1
+     Orbits                          1
+     Shifter2bit1                    2
+
+=== Shifter2bit1 ===
+
+   Number of wires:                  2
+   Number of wire bits:             32
+   Number of public wires:           2
+   Number of public wire bits:      32
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  0
+
+=== design hierarchy ===
+
+   Q2                                1
+     Adder                           1
+     And16bit                        1
+     Inventer                        1
+     Mux4                            2
+     Or16bit                         1
+     Orbits                          1
+     Shifter2bit1                    2
+
+   Number of wires:                218
+   Number of wire bits:            761
+   Number of public wires:          50
+   Number of public wire bits:     579
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                269
+     $_ANDNOT_                       8
+     $_AND_                         21
+     $_AOI3_                        10
+     $_MUX_                         96
+     $_NAND_                        10
+     $_NOR_                         14
+     $_NOT_                         23
+     $_OAI3_                        13
+     $_ORNOT_                       14
+     $_OR_                          27
+     $_XNOR_                        21
+     $_XOR_                         12
+
+2.27. Executing CHECK pass (checking for obvious problems).
+checking module Adder..
+checking module And16bit..
+checking module Inventer..
+checking module Mux4..
+checking module Or16bit..
+checking module Orbits..
+checking module Q2..
+checking module Shifter2bit1..
+found and reported 0 problems.
+
+yosys> dfflibmap -liberty mycells.lib
+
+3. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell DFF (noninv, pins=3, area=18.00) is a direct match for cell type $_DFF_P_.
+  create mapping for $_DFF_N_ from mapping for $_DFF_P_.
+  final dff cell mappings:
+    DFF _DFF_N_ (.C(~C), .D( D), .Q( Q));
+    DFF _DFF_P_ (.C( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    unmapped dff cell: $_DFF_PN0_
+    unmapped dff cell: $_DFF_PN1_
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFSR_NNN_
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+Mapping DFF cells in module `\Adder':
+Mapping DFF cells in module `\And16bit':
+Mapping DFF cells in module `\Inventer':
+Mapping DFF cells in module `\Mux4':
+Mapping DFF cells in module `\Or16bit':
+Mapping DFF cells in module `\Orbits':
+Mapping DFF cells in module `\Q2':
+Mapping DFF cells in module `\Shifter2bit1':
+
+yosys> abc -liberty mycells.lib
+
+4. Executing ABC pass (technology mapping using ABC).
+
+4.1. Extracting gate netlist of module `\Adder' to `<abc-temp-dir>/input.blif'..
+Extracted 99 gates and 132 wires to a netlist network with 33 inputs and 17 outputs.
+
+4.1.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC:
+ABC: + read_blif <abc-temp-dir>/input.blif
+ABC: + read_lib -w C:\Users\Asus\Desktop\projects\aa\src/mycells.lib
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Libery parser cannot read "time_unit".  Assuming   time_unit : "1ns".
+ABC: Libery parser cannot read "capacitive_load_unit". Assuming   capacitive_load_unit(1, pf).
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF".
+ABC: Library "demo" from "C:\Users\Asus\Desktop\projects\aa\src/mycells.lib" has 4 cells (1 skipped: 1 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.00 MB. Time =     0.00 sec
+ABC: + strash
+ABC: + ifraig
+ABC: + scorr
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2
+ABC: + dretime
+ABC: + retime
+ABC: + strash
+ABC: + &get -n
+ABC: + &dch -f
+ABC: + &nf
+ABC: + &put
+ABC: + write_blif <abc-temp-dir>/output.blif
+
+4.1.2. Re-integrating ABC results.
+ABC RESULTS:              NAND cells:       73
+ABC RESULTS:               NOR cells:      103
+ABC RESULTS:               NOT cells:       44
+ABC RESULTS:        internal signals:       82
+ABC RESULTS:           input signals:       33
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+
+4.2. Extracting gate netlist of module `\And16bit' to `<abc-temp-dir>/input.blif'..
+Extracted 16 gates and 48 wires to a netlist network with 32 inputs and 16 outputs.
+
+4.2.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC:
+ABC: + read_blif <abc-temp-dir>/input.blif
+ABC: + read_lib -w C:\Users\Asus\Desktop\projects\aa\src/mycells.lib
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Libery parser cannot read "time_unit".  Assuming   time_unit : "1ns".
+ABC: Libery parser cannot read "capacitive_load_unit". Assuming   capacitive_load_unit(1, pf).
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF".
+ABC: Library "demo" from "C:\Users\Asus\Desktop\projects\aa\src/mycells.lib" has 4 cells (1 skipped: 1 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.00 MB. Time =     0.00 sec
+ABC: + strash
+ABC: + ifraig
+ABC: + scorr
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2
+ABC: + dretime
+ABC: + retime
+ABC: + strash
+ABC: + &get -n
+ABC: + &dch -f
+ABC: + &nf
+ABC: + &put
+ABC: + write_blif <abc-temp-dir>/output.blif
+
+4.2.2. Re-integrating ABC results.
+ABC RESULTS:              NAND cells:       16
+ABC RESULTS:               NOT cells:       16
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:       32
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+
+4.3. Extracting gate netlist of module `\Inventer' to `<abc-temp-dir>/input.blif'..
+Extracted 16 gates and 32 wires to a netlist network with 16 inputs and 16 outputs.
+
+4.3.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC:
+ABC: + read_blif <abc-temp-dir>/input.blif
+ABC: + read_lib -w C:\Users\Asus\Desktop\projects\aa\src/mycells.lib
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Libery parser cannot read "time_unit".  Assuming   time_unit : "1ns".
+ABC: Libery parser cannot read "capacitive_load_unit". Assuming   capacitive_load_unit(1, pf).
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF".
+ABC: Library "demo" from "C:\Users\Asus\Desktop\projects\aa\src/mycells.lib" has 4 cells (1 skipped: 1 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.00 MB. Time =     0.00 sec
+ABC: + strash
+ABC: + ifraig
+ABC: + scorr
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2
+ABC: + dretime
+ABC: + retime
+ABC: + strash
+ABC: + &get -n
+ABC: + &dch -f
+ABC: + &nf
+ABC: + &put
+ABC: + write_blif <abc-temp-dir>/output.blif
+
+4.3.2. Re-integrating ABC results.
+ABC RESULTS:               NOT cells:       16
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:       16
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+
+4.4. Extracting gate netlist of module `\Mux4' to `<abc-temp-dir>/input.blif'..
+Extracted 51 gates and 117 wires to a netlist network with 66 inputs and 16 outputs.
+
+4.4.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC:
+ABC: + read_blif <abc-temp-dir>/input.blif
+ABC: + read_lib -w C:\Users\Asus\Desktop\projects\aa\src/mycells.lib
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Libery parser cannot read "time_unit".  Assuming   time_unit : "1ns".
+ABC: Libery parser cannot read "capacitive_load_unit". Assuming   capacitive_load_unit(1, pf).
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF".
+ABC: Library "demo" from "C:\Users\Asus\Desktop\projects\aa\src/mycells.lib" has 4 cells (1 skipped: 1 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.00 MB. Time =     0.00 sec
+ABC: + strash
+ABC: + ifraig
+ABC: + scorr
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2
+ABC: + dretime
+ABC: + retime
+ABC: + strash
+ABC: + &get -n
+ABC: + &dch -f
+ABC: + &nf
+ABC: + &put
+ABC: + write_blif <abc-temp-dir>/output.blif
+
+4.4.2. Re-integrating ABC results.
+ABC RESULTS:              NAND cells:       68
+ABC RESULTS:               NOR cells:       65
+ABC RESULTS:               NOT cells:       34
+ABC RESULTS:        internal signals:       35
+ABC RESULTS:           input signals:       66
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+
+4.5. Extracting gate netlist of module `\Or16bit' to `<abc-temp-dir>/input.blif'..
+Extracted 16 gates and 48 wires to a netlist network with 32 inputs and 16 outputs.
+
+4.5.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC:
+ABC: + read_blif <abc-temp-dir>/input.blif
+ABC: + read_lib -w C:\Users\Asus\Desktop\projects\aa\src/mycells.lib
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Libery parser cannot read "time_unit".  Assuming   time_unit : "1ns".
+ABC: Libery parser cannot read "capacitive_load_unit". Assuming   capacitive_load_unit(1, pf).
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF".
+ABC: Library "demo" from "C:\Users\Asus\Desktop\projects\aa\src/mycells.lib" has 4 cells (1 skipped: 1 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.00 MB. Time =     0.00 sec
+ABC: + strash
+ABC: + ifraig
+ABC: + scorr
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2
+ABC: + dretime
+ABC: + retime
+ABC: + strash
+ABC: + &get -n
+ABC: + &dch -f
+ABC: + &nf
+ABC: + &put
+ABC: + write_blif <abc-temp-dir>/output.blif
+
+4.5.2. Re-integrating ABC results.
+ABC RESULTS:               NOR cells:       16
+ABC RESULTS:               NOT cells:       16
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:       32
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+
+4.6. Extracting gate netlist of module `\Orbits' to `<abc-temp-dir>/input.blif'..
+Extracted 15 gates and 31 wires to a netlist network with 16 inputs and 1 outputs.
+
+4.6.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC:
+ABC: + read_blif <abc-temp-dir>/input.blif
+ABC: + read_lib -w C:\Users\Asus\Desktop\projects\aa\src/mycells.lib
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Libery parser cannot read "time_unit".  Assuming   time_unit : "1ns".
+ABC: Libery parser cannot read "capacitive_load_unit". Assuming   capacitive_load_unit(1, pf).
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF".
+ABC: Library "demo" from "C:\Users\Asus\Desktop\projects\aa\src/mycells.lib" has 4 cells (1 skipped: 1 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.00 MB. Time =     0.00 sec
+ABC: + strash
+ABC: + ifraig
+ABC: + scorr
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2
+ABC: + dretime
+ABC: + retime
+ABC: + strash
+ABC: + &get -n
+ABC: + &dch -f
+ABC: + &nf
+ABC: + &put
+ABC: + write_blif <abc-temp-dir>/output.blif
+
+4.6.2. Re-integrating ABC results.
+ABC RESULTS:              NAND cells:        5
+ABC RESULTS:               NOR cells:       10
+ABC RESULTS:        internal signals:       14
+ABC RESULTS:           input signals:       16
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+4.7. Extracting gate netlist of module `\Q2' to `<abc-temp-dir>/input.blif'..
+Extracted 5 gates and 9 wires to a netlist network with 4 inputs and 4 outputs.
+
+4.7.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC:
+ABC: + read_blif <abc-temp-dir>/input.blif
+ABC: + read_lib -w C:\Users\Asus\Desktop\projects\aa\src/mycells.lib
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Libery parser cannot read "time_unit".  Assuming   time_unit : "1ns".
+ABC: Libery parser cannot read "capacitive_load_unit". Assuming   capacitive_load_unit(1, pf).
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF".
+ABC: Library "demo" from "C:\Users\Asus\Desktop\projects\aa\src/mycells.lib" has 4 cells (1 skipped: 1 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.00 MB. Time =     0.00 sec
+ABC: + strash
+ABC: + ifraig
+ABC: + scorr
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2
+ABC: + dretime
+ABC: + retime
+ABC: + strash
+ABC: + &get -n
+ABC: + &dch -f
+ABC: + &nf
+ABC: + &put
+ABC: + write_blif <abc-temp-dir>/output.blif
+
+4.7.2. Re-integrating ABC results.
+ABC RESULTS:               NOR cells:        4
+ABC RESULTS:               NOT cells:        4
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        4
+ABC RESULTS:          output signals:        4
+Removing temp directory.
+
+4.8. Extracting gate netlist of module `\Shifter2bit1' to `<abc-temp-dir>/input.blif'..
+Extracted 0 gates and 0 wires to a netlist network with 0 inputs and 0 outputs.
+Don't call ABC as there is nothing to map.
+Removing temp directory.
+
+yosys> write_verilog -noattr simple_synth.v
+
+5. Executing Verilog backend.
+Dumping module `\Adder'.
+Dumping module `\And16bit'.
+Dumping module `\Inventer'.
+Dumping module `\Mux4'.
+Dumping module `\Or16bit'.
+Dumping module `\Orbits'.
+Dumping module `\Q2'.
+Dumping module `\Shifter2bit1'.

@@ -1,0 +1,15 @@
+{C:/Users/Asus/Desktop/verilog/soal 5/Q5_TB.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Asus/Desktop/verilog/soal 5/Q5_TB.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Q5_Gate_TB
+
+Top level modules:
+	Q5_Gate_TB
+
+} {} {}} {C:/Users/Asus/Desktop/verilog/soal 5/Q5_verilog.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Asus/Desktop/verilog/soal 5/Q5_verilog.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Q5_Gate
+
+Top level modules:
+	Q5_Gate
+
+} {} {}}

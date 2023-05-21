@@ -1,0 +1,8 @@
+C:/Users/Asus/Desktop/CA5/B-i-Quartes/divider_TB.v {1 {vlog -work work -stats=none {C:\Users\Asus\Desktop\CA5\B-i-Quartes\divider_TB.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module divider_TB
+
+Top level modules:
+	divider_TB
+
+} {} {}}

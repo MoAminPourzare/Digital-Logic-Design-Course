@@ -1,0 +1,219 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Asus/Desktop/verilog/soal 5
+vCircuit_Q3
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1636476537
+!i10b 1
+!s100 A0i^X]Om7hzn@PBmM8VD01
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IQfWalh[gJEYEo;`7G`Roz2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/Asus/Desktop/verilog/soal 6
+Z5 w1636475655
+Z6 8C:/Users/Asus/Desktop/verilog/soal 6/Q6_verilog.sv
+Z7 FC:/Users/Asus/Desktop/verilog/soal 6/Q6_verilog.sv
+!i122 6
+L0 53 9
+Z8 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z9 !s108 1636476537.000000
+!s107 C:/Users/Asus/Desktop/verilog/soal 6/Q6_verilog.sv|
+Z10 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Asus/Desktop/verilog/soal 6/Q6_verilog.sv|
+!i113 1
+Z11 o-work work -sv
+Z12 tCvgOpt 0
+n@circuit_@q3
+vCircuit_Q4
+R0
+R1
+!i10b 1
+!s100 dc^5OFdEJ:X9;<P0a4YOl3
+R2
+IQ_DzihaZ0Gf@KnA>6VVZC0
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 6
+L0 28 7
+R8
+r1
+!s85 0
+31
+R9
+Z13 !s107 C:/Users/Asus/Desktop/verilog/soal 6/Q6_verilog.sv|
+R10
+!i113 1
+R11
+R12
+n@circuit_@q4
+vCircuit_Q5
+R0
+R1
+!i10b 1
+!s100 fVo8eRKfz]MGMC:G>O;LC0
+R2
+IgNCi=@;g3kJ]El91:zS5i1
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 6
+L0 63 16
+R8
+r1
+!s85 0
+31
+R9
+R13
+R10
+!i113 1
+R11
+R12
+n@circuit_@q5
+vNAND_gate
+R0
+R1
+!i10b 1
+!s100 m[>?2L_<KVGF7C>7bYS_O1
+R2
+InJn4OKhFb;adzcV?7K1kN1
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 6
+L0 36 9
+R8
+r1
+!s85 0
+31
+R9
+R13
+R10
+!i113 1
+R11
+R12
+n@n@a@n@d_gate
+vNandif1
+R0
+R1
+!i10b 1
+!s100 NQd[K2`Q1^KZK1QO`R`7g1
+R2
+IGKmOMJKJgRHDF1BMFnR5h1
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 6
+L0 14 13
+R8
+r1
+!s85 0
+31
+R9
+R13
+R10
+!i113 1
+R11
+R12
+n@nandif1
+vNOT_gate
+R0
+R1
+!i10b 1
+!s100 4QAHCoOYz4n`A]E;^Qhdb2
+R2
+Iec0i2MI:aO8jSL=a^<O^=1
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 6
+L0 46 6
+R8
+r1
+!s85 0
+31
+R9
+R13
+R10
+!i113 1
+R11
+R12
+n@n@o@t_gate
+vNotif1
+R0
+R1
+!i10b 1
+!s100 YH2OQR=>@A1ih<_<4b_;K3
+R2
+Ij77?9[2TL=3GP^CX60B_j3
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 6
+L0 2 11
+R8
+r1
+!s85 0
+31
+R9
+R13
+R10
+!i113 1
+R11
+R12
+n@notif1
+vQ6_Circuit_TB
+R0
+R1
+!i10b 1
+!s100 @U:aPAMOH0acK@G8K`NaG3
+R2
+ILC7<8k66cV1h1n2LQ88jG1
+R3
+S1
+R4
+w1636476362
+8C:/Users/Asus/Desktop/verilog/soal 6/Q6_TB.sv
+FC:/Users/Asus/Desktop/verilog/soal 6/Q6_TB.sv
+!i122 5
+L0 2 18
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Asus/Desktop/verilog/soal 6/Q6_TB.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Asus/Desktop/verilog/soal 6/Q6_TB.sv|
+!i113 1
+R11
+R12
+n@q6_@circuit_@t@b

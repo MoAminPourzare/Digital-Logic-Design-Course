@@ -1,0 +1,16 @@
+C:/Users/Asus/Desktop/CA5/C-i-Quartus/simulation/modelsim/Orthogonal.vo {1 {vlog -work work -stats=none C:/Users/Asus/Desktop/CA5/C-i-Quartus/simulation/modelsim/Orthogonal.vo
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Orthogonal
+-- Compiling module hard_block
+
+Top level modules:
+	Orthogonal
+
+} {} {}} C:/Users/Asus/Desktop/CA5/C-i-Quartus/Orthogonal_TB.v {1 {vlog -work work -stats=none {C:\Users\Asus\Desktop\CA5\C-i-Quartus\Orthogonal_TB.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Orthogonal_TB
+
+Top level modules:
+	Orthogonal_TB
+
+} {} {}}

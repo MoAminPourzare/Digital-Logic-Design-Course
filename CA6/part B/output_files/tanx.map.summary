@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Jan 09 01:37:05 2022
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : tanx
+Top-level Entity Name : tanx
+Family : Cyclone IV E
+Total logic elements : 86
+    Total combinational functions : 71
+    Dedicated logic registers : 51
+Total registers : 51
+Total pins : 43
+Total virtual pins : 0
+Total memory bits : 128
+Embedded Multiplier 9-bit elements : 2
+Total PLLs : 0

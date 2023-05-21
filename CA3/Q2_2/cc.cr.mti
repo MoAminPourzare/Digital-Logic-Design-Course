@@ -1,0 +1,45 @@
+C:/Users/Asus/Desktop/projects/poot/cctb.sv {1 {vlog -work work -sv -stats=none C:/Users/Asus/Desktop/projects/poot/cctb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Q2_TB
+
+Top level modules:
+	Q2_TB
+
+} {} {}} C:/Users/Asus/Desktop/projects/poot/ccv.sv {2 {vlog -work work -sv -stats=none C:/Users/Asus/Desktop/projects/poot/ccv.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Q2
+-- Compiling module Shifter2bit1
+-- Compiling module Adder
+-- Compiling module And16bit
+-- Compiling module Mux4
+-- Compiling module Mux2
+-- Compiling module Or16bit
+-- Compiling module Orbits
+-- Compiling module Inventer
+-- Compiling module NOT
+-- Compiling module NAND
+-- Compiling module NOR
+-- Compiling module DFF
+** Warning: C:/Users/Asus/Desktop/projects/poot/ccv.sv(86): (vlog-2275) Existing module 'Adder' will be overwritten.
+-- Compiling module Adder
+** Warning: C:/Users/Asus/Desktop/projects/poot/ccv.sv(1535): (vlog-2275) Existing module 'And16bit' will be overwritten.
+-- Compiling module And16bit
+** Warning: C:/Users/Asus/Desktop/projects/poot/ccv.sv(1797): (vlog-2275) Existing module 'Inventer' will be overwritten.
+-- Compiling module Inventer
+** Warning: C:/Users/Asus/Desktop/projects/poot/ccv.sv(1930): (vlog-2275) Existing module 'Mux4' will be overwritten.
+-- Compiling module Mux4
+** Warning: C:/Users/Asus/Desktop/projects/poot/ccv.sv(3090): (vlog-2275) Existing module 'Or16bit' will be overwritten.
+-- Compiling module Or16bit
+** Warning: C:/Users/Asus/Desktop/projects/poot/ccv.sv(3352): (vlog-2275) Existing module 'Orbits' will be overwritten.
+-- Compiling module Orbits
+-- Compiling module Q2_yosys
+** Warning: C:/Users/Asus/Desktop/projects/poot/ccv.sv(3624): (vlog-2275) Existing module 'Shifter2bit1' will be overwritten.
+-- Compiling module Shifter2bit1
+
+Top level modules:
+	Q2
+	Mux2
+	DFF
+	Q2_yosys
+
+} {} {}}
